@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mayor Services | Executive Motion Studio</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Unbounded:wght@700;900&family=Outfit:wght@300;600&display=swap');
+
+        :root {
+            --primary: #00e5ff;
+            --bg: #030303;
+            --card: #0a0a0a;
+            --glass: rgba(255, 255, 255, 0.03);
+        }
+
+        * { cursor: none; } 
+
+        body {
+            margin: 0;
+            background-color: var(--bg);
+            color: #ffffff;
+            font-family: 'Outfit', sans-serif;
+            overflow-x: hidden;
+        }
+
+        #cursor {
+            width: 20px;
+            height: 20px;
+            background: var(--primary);
+            border-radius: 50%;
+            position: fixed;
+            pointer-events: none;
+            z-index: 9999;
+            transition: transform 0.1s;
+            mix-blend-mode: difference;
+        }
+
+        nav {
+            position: fixed;
+            top: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 90%;
+            max-width: 1200px;
+            background: var(--glass);
+            backdrop-filter: blur(15px);
+            border: 1px solid rgba(255,255,255,0.1);
+            padding: 15px 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-radius: 100px;
+            z-index: 1000;
+        }
+
+        .logo { font-family: 'Unbounded'; font-size: 0.9rem; letter-spacing: 2px; }
+        .logo span { color: var(--primary); }
+
+        .hero {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            background-image: radial-gradient(circle at 50% 50%, #00e5ff0a 0%, transparent 50%);
+        }
+
+        .hero h1 {
+            font-family: 'Unbounded';
+            font-size: clamp(3rem, 15vw, 8rem);
+            line-height: 0.8;
+            margin: 0;
+            text-transform: uppercase;
+        }
+
+        /* NEW: About Section */
+        .about-section {
+            padding: 100px 10%;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            border-top: 1px solid #111;
+            background: #050505;
+        }
+
+        .about-text h2 {
+            font-family: 'Unbounded';
+            font-size: 1.5rem;
+            color: var(--primary);
+            margin-bottom: 20px;
+        }
+
+        .about-text p {
+            line-height: 1.8;
+            color: #888;
+            font-size: 1rem;
+            margin-bottom: 20px;
+        }
+
+        /* Gallery Grid */
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 2px;
+            background: #111;
+            border-top: 1px solid #111;
+        }
+
+        .project {
+            position: relative;
+            height: 500px;
+            overflow: hidden;
+            background: #000;
+        }
+
+        .project video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            opacity: 0.6;
+            transition: 0.8s cubic-bezier(0.2, 1, 0.3, 1);
+        }
+
+        .project:hover video {
+            opacity: 1;
+            transform: scale(1.05);
+        }
+
+        .overlay {
+            position: absolute;
+            bottom: 40px;
+            left: 40px;
+            z-index: 10;
+        }
+
+        .overlay h3 { font-family: 'Unbounded'; font-size: 0.8rem; margin: 0; letter-spacing: 2px; }
+        
+        .order-trigger {
+            display: inline-block;
+            margin-top: 15px;
+            color: var(--primary);
+            text-decoration: none;
+            font-size: 0.7rem;
+            font-weight: 800;
+            text-transform: uppercase;
+            border-bottom: 2px solid var(--primary);
+            padding-bottom: 5px;
+        }
+
+        footer {
+            padding: 100px 5%;
+            text-align: center;
+            border-top: 1px solid #111;
+        }
+
+        @media (max-width: 768px) {
+            .gallery { grid-template-columns: 1fr; }
+            .about-section { grid-template-columns: 1fr; padding: 60px 5%; }
+            #cursor { display: none; }
+            * { cursor: auto; }
+        }
+    </style>
+</head>
+<body>
+
+    <div id="cursor"></div>
+
+    <nav>
+        <div class="logo">MAYOR<span>SERVICES</span></div>
+        <div style="font-size: 0.6rem; font-weight: 800; color: #555;">PORTFOLIO v2.0</div>
+    </nav>
+
+    <section class="hero">
+        <p style="letter-spacing: 10px; color: var(--primary); font-size: 0.7rem; margin-bottom: 20px;">ESTABLISHED 2026</p>
+        <h1>ELITE<br>MOTION</h1>
+    </section>
+
+    <section class="about-section">
+        <div class="about-text">
+            <h2>The Art of 3D</h2>
+            <p>3D Design is the architecture of the digital realm. It goes beyond flat imagery to build volume, depth, and physical presence. By manipulating light, texture, and geometry, we create environments and assets that aren't just seen—they are experienced.</p>
+            <p>From hyper-realistic product renders to complex motion graphics, 3D design is the ultimate tool for visual dominance in 2026.</p>
+        </div>
+        <div class="about-text">
+            <h2>The Designer</h2>
+            <p>Mayor is a Visionary Digital Architect specializing in 3D visualization and motion. With a deep technical background in asset modeling and lighting, Mayor transforms raw concepts into high-fidelity digital reality.</p>
+            <p>Every render is a balance of precision engineering and creative storytelling, designed to elevate brands and captivate audiences globally.
+            EHEN HE IS ALSO A RICH AND FUNNY GUY 
+            I PRAY I PASS HIS INTERVIEW TOO 🤌😂</p>
+        </div>
+    </section>
+
+    <section class="gallery">
+        <div class="project">
+            <video autoplay muted loop playsinline src="video1.mp4"></video>
+            <div class="overlay">
+                <h3>3D DESIGN</h3>
+                <a href="https://wa.me/2349032320783" class="order-trigger">REQUEST PROJECT</a>
+            </div>
+        </div>
+
+        <div class="project">
+            <video autoplay muted loop playsinline src="video2.mp4"></video>
+            <div class="overlay">
+                <h3>3D DESIGN</h3>
+                <a href="https://wa.me/2349032320783" class="order-trigger">REQUEST PROJECT</a>
+            </div>
+        </div>
+
+        <div class="project">
+            <video autoplay muted loop playsinline src="video3.mp4"></video>
+            <div class="overlay">
+                <h3>3D DESIGN</h3>
+                <a href="https://wa.me/2349032320783" class="order-trigger">REQUEST PROJECT</a>
+            </div>
+        </div>
+
+        <div class="project">
+            <video autoplay muted loop playsinline src="video4.mp4"></video>
+            <div class="overlay">
+                <h3>3D DESIGN</h3>
+                <a href="https://wa.me/2349032320783" class="order-trigger">REQUEST PROJECT</a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p style="font-size: 0.7rem; color: #333;">&copy; 2026 MAYOR 3D • DESIGNED BY KELVIN</p>
+    </footer>
+
+    <script>
+        const cursor = document.getElementById('cursor');
+        document.addEventListener('mousemove', e => {
+            cursor.style.left = e.clientX + 'px';
+            cursor.style.top = e.clientY + 'px';
+        });
+
+        document.querySelectorAll('a').forEach(link => {
+            link.addEventListener('mouseenter', () => cursor.style.transform = 'scale(3)');
+            link.addEventListener('mouseleave', () => cursor.style.transform = 'scale(1)');
+        });
+    </script>
+</body>
+</html>
